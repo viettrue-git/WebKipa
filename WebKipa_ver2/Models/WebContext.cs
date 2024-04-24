@@ -12,20 +12,23 @@ namespace WebApp.Models
         public DbSet<Banner> banners { set; get; }        // bảng banner
         public DbSet<User> users { set; get; }                // bảng user
 
-/*
+
         public WebContext(DbContextOptions options) : base(options)
         {
 
-        }*/
-        // chuỗi kết nối với tên db sẽ làm  việc đặt là webdb
-        public const string ConnectStrring = @"Data Source=VIETANHDEV\MSSQLSERVER22;Initial Catalog=KipaInfomation;User ID=sa;Password=123456;TrustServerCertificate=True";
+        }
 
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    //var config = _appsettings.Value.DefaultConnection;
+        //    optionsBuilder.UseSqlServer(ConnectStrring);
+        //    //optionsBuilder.UseLoggerFactory(GetLoggerFactory());       // bật logger
+        //}
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //var config = _appsettings.Value.DefaultConnection;
-            optionsBuilder.UseSqlServer(ConnectStrring);
-            //optionsBuilder.UseLoggerFactory(GetLoggerFactory());       // bật logger
+            modelBuilder.Entity<Banner>().ToTable("Banner");
+            modelBuilder.Entity<User>().ToTable("User");
         }
     }
 }
