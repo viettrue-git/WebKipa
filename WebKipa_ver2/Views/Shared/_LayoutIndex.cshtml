@@ -8,7 +8,7 @@
 
     header {
         margin: auto;
-         display:flex;
+        display:flex;
         grid-template-columns: 50px 1fr 50px;
         grid-template-rows: 50px;
         justify-content: center;
@@ -35,7 +35,7 @@
     }
 
     .slider-kipa-menu {
-        height: 100vh;
+        height: 60%;
         top: -90px;
         position: relative;
     }
@@ -81,7 +81,7 @@
 </head>
 <body>
     <header>
-                <ul class="menu-kipa">
+               @*  <ul class="menu-kipa">
                     <li>
                         VỀ KIPA
                     </li>
@@ -97,7 +97,12 @@
                     <li>
                         ĐĂNG KÝ TƯ VẤN
                     </li>
-                </ul>
+                </ul> *@
+<div class="navigation-item">
+            <div class="navigation">
+            </div>
+</div>
+
     </header>
     <div class="slider-kipa-menu">
         <div class="list">
@@ -108,7 +113,7 @@
                     <p>UY TÍN - CHẤT LƯỢNG </p>
                 </div>
             </div>
-            <div class="item">
+            @* <div class="item">
                 <img src="~/Content/banner1.jpg">
                 <div class="conntent">
                     <p>Du học KIPA</p>
@@ -121,12 +126,63 @@
                     <p>Du học KIPA</p>
                     <p>UY TÍN - CHẤT LƯỢNG </p>
                 </div>
-            </div>
+            </div> *@
         </div>
     </div>
     <div>
         @RenderBody()
     </div>
-    <footer>Footer</footer>
+    <footer>
+        <div class ="footer-web row">
+            <div class ="footer-logo col-3">
+                <div class="logo-Royal">
+                    <img class="image-banner" src="~/Content/logo.jpg">
+                 
+                </div>
+                <div class="logo-kipa">
+                    <img class="image-banner" src="~/Content/logo.jpg">
+                </div>
+                </div>
+                <div class="address-info col-5">
+                <div class="info-address-vietnamsee">
+                    <span>
+                        Địa hiện tại: 8 Beonji, Sutong 1-gil, Buri-myeon, Geumsan-gun, Chungcheongnam-do
+                        <span>
+                            Địa hiện tại: 8 Beonji, Sutong 1-gil, Buri-myeon, Geumsan-gun, Chungcheongnam-do
+                        </span>
+                        <span>
+                            Địa chỉ:số 20 Đồng Me - Mễ Trì -  Nam Từ Liên - Hà Nội
+                        </span>
+                        <span>
+                            FAX :032-654-1256   E-MAIL : daehan@imperialhouse.kr
+                        </span>
+                        <span>
+                            Chi nhánh: Sơn Tây, Phú Đô, Hoài Đức - Hà Nội , tỉnh Hải Dương
+                        </span>
+                        <span>
+                            TEL : 042-543-8045
+                        </span>
+                         
+                    </span>
+                </div>
+                <div class="info-address-korea">
+                    <span>
+                        Chi nhánh : Gyeonggi kết nối xã hội công dân toàn cầuư
+                        </
+                        <span>
+                            Địa hiện tại: 2 Cheong, 147-31 Simgok-dong , Bucheon-si, Gyeonggi-do
+                        </span>
+                        <span>
+                            TEL : 042-543-8045  FAX :032-654-1256
+                        </span>
+                </div>
+                </div>
+            <div class="col-4 info-social-network">
+                Facebook
+                </div>
+        </div>
+
+
+    </footer>
 </body>
 </html>
