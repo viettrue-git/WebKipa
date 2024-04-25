@@ -4,22 +4,26 @@ namespace WebKipa_ver2.Areas.Admin.Service
 {
     public class UserService
     {
-        public UserService() { }
-        public List<User> GetAllUser(string username)
+        private WebContext _webContext;
+        public UserService(WebContext webContext)
         {
-            var listData = new List<User>();
+            _webContext = webContext;
+        }
+        public List<UserModel> GetAllUser(string username)
+        {
+            var listData = _webContext.users.ToList();
             return listData;
         }
 
-        public bool CreateUser (User user)
+        public bool CreateUser (UserModel user)
         {
             return false;
         }
 
-        public void UpdateUser (User user)
+        public void UpdateUser (UserModel user)
         {
 
         }
-        public void DeleteUser (User user) { }
+        public void DeleteUser (UserModel user) { }
     }
 }

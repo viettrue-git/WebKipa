@@ -1,45 +1,29 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using WebApp.Models;
-using WebKipa_ver2.Areas.Admin.Service;
-using WebKipa_ver2.Dependency.service.User;
 
 namespace WebKipa_ver2.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class UserController : Controller
+    public class BannerController : Controller
     {
-        private IUserService _userservice;
-        private readonly IOptions<AppSettings> _appsettings;
-
-        public UserController(IUserService userservice, IOptions<AppSettings> appsettings)
+        // GET: Banner
+        public ActionResult Index()
         {
-            _userservice = userservice;
-            _appsettings = appsettings;
-        }
-
-        // GET: UserController
-        [HttpGet]
-        public async Task<IActionResult> Index(string name)
-        {
-            var listData = await _userservice.getUser(name);
             return View();
         }
 
-        // GET: UserController/Details/5
+        // GET: Banner/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: UserController/Create
-        public ActionResult CreateUser()
+        // GET: Banner/Create
+        public ActionResult Create()
         {
             return View();
         }
 
-        // POST: UserController/Create
+        // POST: Banner/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -54,13 +38,13 @@ namespace WebKipa_ver2.Areas.Admin.Controllers
             }
         }
 
-        // GET: UserController/Edit/5
+        // GET: Banner/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: UserController/Edit/5
+        // POST: Banner/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -75,13 +59,13 @@ namespace WebKipa_ver2.Areas.Admin.Controllers
             }
         }
 
-        // GET: UserController/Delete/5
+        // GET: Banner/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: UserController/Delete/5
+        // POST: Banner/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

@@ -10,7 +10,7 @@ namespace WebApp.Models
     public class WebContext : DbContext
     {
         public DbSet<Banner> banners { set; get; }        // bảng banner
-        public DbSet<User> users { set; get; }                // bảng user
+        public DbSet<UserModel> users { set; get; }                // bảng user
 
 
         public WebContext(DbContextOptions options) : base(options)
@@ -28,7 +28,7 @@ namespace WebApp.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Banner>().ToTable("Banner");
-            modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<UserModel>().ToTable("User");
         }
     }
 }

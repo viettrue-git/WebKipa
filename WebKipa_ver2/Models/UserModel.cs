@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApp.Models
 {
-    public class User
+    public class UserModel
     {
         [Key]
         [StringLength(20)]

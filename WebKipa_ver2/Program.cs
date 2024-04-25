@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using System.Configuration;
 using WebApp.Models;
+using WebKipa_ver2.Dependency.service.User;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<WebContext>(options =>
     options.UseSqlServer(connectionString));
 
 
+builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IUserService, UserService>();   
 
 var app = builder.Build();
 

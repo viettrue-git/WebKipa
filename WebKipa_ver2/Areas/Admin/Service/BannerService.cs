@@ -18,7 +18,7 @@ namespace WebApp.Areas.Admin.Service
         /// <returns></returns>
         public IEnumerable<Banner> GetAllBanner(int pageIndex = 1,int pageSize = 10)
         {
-            var list =  _webContext.banners.ToList().ToPagedList(pageIndex, pageSize);
+            var list =  _webContext.banners.ToList();
             return list;
         }
         public bool CreateBanner (BannerRequest banner)
