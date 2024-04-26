@@ -2,6 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using System.Configuration;
 using WebApp.Models;
+using WebKipa_ver2.Dependency.repository.Login;
+using WebKipa_ver2.Dependency.repository.User;
+using WebKipa_ver2.Dependency.service.Login;
 using WebKipa_ver2.Dependency.service.User;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +20,11 @@ builder.Services.AddDbContext<WebContext>(options =>
 
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IUserService, UserService>();   
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 
 var app = builder.Build();
 

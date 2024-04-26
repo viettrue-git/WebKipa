@@ -24,7 +24,7 @@ namespace WebKipa_ver2.Areas.Admin.Controllers
         public async Task<IActionResult> Index(string name)
         {
             var listData = await _userservice.getUser(name);
-            return View();
+            return View(listData);
         }
 
         // GET: UserController/Details/5
