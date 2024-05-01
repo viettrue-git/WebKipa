@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApp.Models;
 
@@ -10,9 +11,11 @@ using WebApp.Models;
 namespace WebKipa_ver2.Migrations
 {
     [DbContext(typeof(WebContext))]
-    partial class WebContextModelSnapshot : ModelSnapshot
+    [Migration("20240425081748_InitWebDB")]
+    partial class InitWebDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +44,7 @@ namespace WebKipa_ver2.Migrations
                     b.ToTable("Banner", (string)null);
                 });
 
-            modelBuilder.Entity("WebApp.Models.UserModel", b =>
+            modelBuilder.Entity("WebApp.Models.User", b =>
                 {
                     b.Property<string>("UserId")
                         .HasMaxLength(20)

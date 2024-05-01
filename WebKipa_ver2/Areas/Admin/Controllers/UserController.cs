@@ -1,15 +1,31 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using WebApp.Models;
+using WebApp.Models.GetMap;
+using WebKipa_ver2.Areas.Admin.Service;
+using WebKipa_ver2.Dependency.service.User;
 
 namespace WebKipa_ver2.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class UserController : Controller
     {
-        // GET: UserController
-        public ActionResult Index()
+        private IUserService _userservice;
+        private readonly IOptions<AppSettings> _appsettings;
+
+        public UserController(IUserService userservice, IOptions<AppSettings> appsettings)
         {
-            return View();
+            _userservice = userservice;
+            _appsettings = appsettings;
+        }
+
+        // GET: UserController
+        [HttpGet]
+        public async Task<IActionResult> Index(string name)
+        {
+            var listData = await _userservice.getUser(name);
+            return View(listData);
         }
 
         // GET: UserController/Details/5
@@ -18,6 +34,7 @@ namespace WebKipa_ver2.Areas.Admin.Controllers
             return View();
         }
 
+        [HttpGet]
         // GET: UserController/Create
         public ActionResult CreateUser()
         {
@@ -27,16 +44,26 @@ namespace WebKipa_ver2.Areas.Admin.Controllers
         // POST: UserController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<IActionResult> CreateUser([Bind(include: "UserId,UserName,Password,Email")] UserModel user)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var resultLogin = await _userservice.createUser(user);
+                if (resultLogin)
+                {
+                    return RedirectToAction("Index", "User");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Thông tin tài khoản hoặc mật khẩu không chính sác");
+                }
+
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+
             }
+            return View(user);
         }
 
         // GET: UserController/Edit/5
