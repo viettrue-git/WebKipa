@@ -11,7 +11,7 @@ namespace WebKipa_ver2.Areas.Admin.Service
         }
         public List<UserModel> GetAllUser(string username)
         {
-            var listData = _webContext.users.ToList();
+            var listData = _webContext.User.ToList();
             return listData;
         }
 
