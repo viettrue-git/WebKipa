@@ -6,5 +6,7 @@ namespace WebKipa_ver2.Dependency.service.User
     {
         Task<int> updateUser(UserModel user);
         Task<List<UserModel>> getUser(string name);
+
+        Task<bool> createUser(UserModel user);
     }
 }

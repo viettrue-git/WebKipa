@@ -8,5 +8,7 @@ namespace WebKipa_ver2.Dependency.repository.User
 
         Task<int> updateUser(UserModel user);
 
+        Task<bool> createUser(UserModel user);
+
     }
 }

@@ -12,6 +12,11 @@ namespace WebKipa_ver2.Dependency.service.User
             _userRepository = userRepository;
         }
 
+        public async Task<bool> createUser(UserModel user)
+        {
+            return await _userRepository.createUser(user);
+        }
+
         public async Task<List<UserModel>> getUser(string name)
         {
             return await _userRepository.getAllUser(name); ;   

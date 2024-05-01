@@ -15,6 +15,7 @@ namespace WebApp.Models
 
         public WebContext(DbContextOptions options) : base(options)
         {
+            //Database.EnsureCreated();
 
         }
 

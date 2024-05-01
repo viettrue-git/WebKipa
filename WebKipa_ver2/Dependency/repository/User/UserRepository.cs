@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Options;
 using WebApp.Models;
 using WebKipa_ver2.Base;
+using WebKipa_ver2.Models;
 
 namespace WebKipa_ver2.Dependency.repository.User
 {
@@ -29,6 +30,27 @@ namespace WebKipa_ver2.Dependency.repository.User
         {
             _context.users.Update(user);
             return await _context.SaveChangesAsync();
+        }
+        public async Task<bool> createUser(UserModel user)
+        {
+            //validate user
+            var isValidate = true;
+            var emailValid = await _context.users.Where(m=>m.Email.Equals(user.Email)).FirstOrDefaultAsync();
+            if (emailValid != null)
+            {
+                isValidate = false;
+                throw new Exception("Email người dùng đã tồn tại");
+            }
+            var userNameValid = await _context.users.Where(m => m.UserName.Equals(user.UserName)).FirstOrDefaultAsync();
+            if (userNameValid != null)
+            {
+                isValidate = false;
+                throw new Exception("Tên đăng nhập đã tồn tại");
+            }
+
+            _context.users.Add(user);
+            return true;
+            
         }
     }
 }
