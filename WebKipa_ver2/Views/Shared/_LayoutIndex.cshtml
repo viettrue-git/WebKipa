@@ -5,26 +5,32 @@
         margin: auto;
     }
 
+    .container-fluid{
+        padding-left: 100px  !important;
+        padding-right: 0 !important;
+    }
 
     header {
-        margin: auto;
-        display:flex;
+      /*   margin: auto;
+        display:flex; */
         grid-template-columns: 50px 1fr 50px;
         grid-template-rows: 50px;
         justify-content: center;
         align-items: center;
-        position: relative;
+       /*  position: relative; */
         z-index: 100;
-        height: 90px;
-        position:fixed
+        height: 110px;
+        position:fixed;
+        left: 0;
+        right: 10%
     }
 
     .navbar {
         background-color: #fff;
         font-size: 24px;
-        border-radius: 16px;
-        margin: 20px;
-        height: 90px;
+      /*   border-radius: 16px;
+        margin: 20px; */
+        height: 110px;
     }
     .navbar-toggler {
         border: none !important;
@@ -36,7 +42,15 @@
             outline: none !important;
         }
 
+    .img-logo-header{
 
+    }
+
+    .multi-language-button {
+        border: none !important;
+        padding: 0 !important;
+    }
+   
 .nav-link{
     color: red;
     font-weight: 500;
@@ -64,7 +78,9 @@
             width: 100%;
             visibility: visible;
         }
-    
+
+    .fixed-top{
+    }
 
     .slider-kipa-menu {
         height: 100vh;
@@ -135,9 +151,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand me-auto" href="#">Kipa</a>
+                <a class="navbar-brand me-auto" href="#">
+                    <img class="img-logo-header" src="~/Content/logoHG.jpg">
+                </a>
            
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
@@ -165,7 +183,7 @@
                     </div>
                 </div>
                     <button class="multi-language-button ">
-                        icon language
+                    <img class="img-logo-language" src="~/Content/MultiLanguage.jpg">
                     </button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
