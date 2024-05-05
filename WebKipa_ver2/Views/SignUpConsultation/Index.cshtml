@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Đăng ký tư vấn";
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+}
+
+<!DOCTYPE html>
+<style>
+    .connect-form{
+     /*    background: linear-gradient(30deg, rgb(196 177 202), rgb(86 86 175), rgb(69 56 97)); */
+        background-color: rgb(132 92 171 / 15%);
+        padding: 40px;
+    
+    }
+    .main-form-connect{
+        border: 2px dashed #411C6B;
+        padding: 10px 40px;
+        width: 70%;
+        height:80%;
+        margin:auto;
+    }
+    
+    .des-sign-up{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        font-size: 24px;
+        color: #411C6B;
+    }
+
+    .image-member{
+        width:90%;
+        padding-top: 30px
+    }
+
+    .des-image-member{
+        display: inline-block;
+        background-color: #411C6B;
+        margin-top: 30px;
+        color: #fff;
+        padding: 10px;
+        margin-left: 10px;
+        border-radius: 4px;
+    }
+
+    .title-form-connect{
+        display: flex;
+        justify-content: end;
+        padding: 10px 69px;
+        color: #411C6B;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+        background-color: #411C6B;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+            background-color: #7232ba ;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+    .submit-btn{
+        display: inline-block;
+        position: absolute;
+        right: 12px;
+    }
+
+    .form-connect-submit{
+        position: relative
+    }
+</style>
+
+<html>
+
+<body>
+    <div class="des-sign-up">Bạn hãy để lại thông tin tại đây để Kipa liên hệ tư vấn chính xác và cụ thể nhất cho bạn về đào tạo tiếng Hàn, du học Hàn Quốc nhé!</div>
+    <div class="connect-form">
+        <div class="main-form-connect row">
+            <div class="left-form-connect col-5">
+                <img class="image-member" src="~/Content/member.png">
+                <div class="des-image-member">Chuyên gia tư vấn du học tại KIPA </div>
+            </div>
+            <div class="right-form-connect col-7">
+                <div class="title-form-connect">ĐĂNG KÝ TƯ VẤN MIỄN PHÍ NGAY</div>
+                <form class="form-connect-submit" >
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">Họ và tên</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Vui lòng nhập tên..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Số điện thoại</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Nhập số điện thoại..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="country">Chương trình quan tâm</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="country" name="country">
+                                <option value="australia">Du học thạc sỹ</option>
+                                <option value="canada">Du học cấp 3</option>
+                                <option value="usa">Đào tạo doanh nghiệp</option>
+                                <option value="usa">Visa E9 về nước</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="subject">Câu hỏi</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="subject" name="subject" placeholder="Nhập câu hỏi bạn cần tư vấn.." style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row submit-btn">
+                        <input type="submit" value="Gửi">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
