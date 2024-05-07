@@ -38,7 +38,7 @@
     .button-progame{
         line-height: 31px;
         height: 100%;
-        background-color: mediumpurple;
+        background-color: #411C6B;
         border-radius:4px;
         color:#fff;
         font-weight:600;
@@ -122,10 +122,6 @@
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
-    .des-school{
-
-    }
-
     .img-korea{
         position: absolute;
         left: 1px;
@@ -151,6 +147,8 @@
         margin-right: 30px;
         width: 320px;
         transition: transform 0.3s ease;
+        word-wrap: break-word;
+        white-space: nowrap;
     }
 
     .card-partner:hover {
@@ -178,7 +176,19 @@
         background-color: yellow;
         position: relative;
     }
+    .main-card{
+        width: 100%;
+        padding: 20px;
+        height: 50%;
+      /*   word-wrap: break-word;
+        white-space: nowrap; */
+    }
 
+    .des-school{
+        height: 100%;
+        width: 100%;
+        word-wrap: break-word;
+    }
 
 </style>
 
@@ -231,7 +241,9 @@
                 <img class="img-school-partner" src="~/Content/school.png">
                 <div class="main-card" >
                     <div class="title-school">Đại học Hàn Quốc</div>
-                    <div class="des-school">Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay</div>
+                    <div class="des-school">
+                        <span>  Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay </span>
+                        </div>
                </div>
                 <img class="img-korea" src="~/Content/korie.png">
         </div>
@@ -247,7 +259,7 @@
                 <img class="img-school-partner" src="~/Content/school.png">
                 <div class="main-card">
                     <div class="title-school">Đại học Hàn Quốc</div>
-                    <div class="des-school">Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay</div>
+                    <span class="des-school">Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay</span>
                 </div>
                 <img class="img-korea" src="~/Content/korie.png">
             </div>
