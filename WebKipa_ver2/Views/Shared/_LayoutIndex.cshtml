@@ -195,21 +195,13 @@
                             <li class="nav-item">
                                 <a class="nav-link mx-lg-2" href="@Url.Action("Index", "HighSchool")">Chương trình du học</a>
                             </li>
-                            <li class="nav-item">
+                         @*    <li class="nav-item">
                                 <a class="nav-link mx-lg-2" href="#">Đào tạo tiếng hàn</a>
-                            </li>
+                            </li> *@
                             <li class="nav-item dropdown">
-                                <a class="nav-link mx-lg-2">Visa</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Visa D4</a></li>
-                                    <li><a class="dropdown-item" href="#">Visa D</a></li>
-                                    <li><a class="dropdown-item" href="#">Visa D10</a></li>
-                                    <li><a class="dropdown-item" href="#">Visa E7</a></li>
-
-                                </ul>
+                                <a class="nav-link mx-lg-2" href="@Url.Action("Index", "D4Visa")">Visa Hàn Quốc</a>
                             </li>
                             <li class="nav-item">
-                                @*  @Html.ActionLink("Đăng ký tư vấn", "Index", "SignUpConsultation") *@
                                 <a class="nav-link mx-lg-2" href="@Url.Action("Index", "SignUpConsultation")">
                                     Liên hệ tư vấn
                                 </a>
@@ -236,8 +228,8 @@
             <div class="carousel-item active">
                 <img src="~/Content/banner1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5 class="animated slideInDown" style="animation-delay: 1s">Third slide label</h5>
-                    <p class="animated fadeInUp" style="animation-delay: 2s">Some representative placeholder content for the third slide.</p>
+                    <h2 class="animated slideInDown" style="animation-delay: 1s">DU HỌC KIPA</h2>
+                    <h4 class="animated fadeInUp" style="animation-delay: 2s">Uy tín - chất lượng - đồng hành tin cậy</h4>
                 </div>
             </div>
             <div class="carousel-item">
@@ -246,8 +238,8 @@
             <div class="carousel-item">
                 <img src="~/Content/banner1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5 class="animated bounceInLeft" style="animation-delay: 1s">Third slide label</h5>
-                    <p class="animated bounceInLeft" style="animation-delay: 2s">Some representative placeholder content for the third slide.</p>
+                    <h2 class="animated bounceInLeft" style="animation-delay: 1s">DU HỌC KIPA</h2>
+                    <h4 class="animated bounceInLeft" style="animation-delay: 2s">Uy tín - chất lượng - đồng hành tin cậy</h4>
                 </div>
             </div>
         </div>
