@@ -2,6 +2,7 @@
     ViewData["Title"] = "Home Page";
     Layout = "~/Views/Shared/_LayoutIndex.cshtml";
 }
+
 <style>
     .text-center{
         height: 100vh;
@@ -188,10 +189,14 @@
         height: 100%;
         width: 100%;
         word-wrap: break-word;
+        white-space: pre-wrap;
     }
 
 </style>
-
+<head>
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+</head>
 <body>
 <div class="text-center row">
         <div class="programe-title col-12">
@@ -361,7 +366,7 @@
             </div>
         </div>
 </div>
-    <script>
+  @*   <script>
         let isDragging = false;
         let startX;
         let startScrollLeft;
@@ -384,6 +389,414 @@
             const x = e.pageX - content.offsetLeft;
             const walk = (x - startX);
             content.scrollLeft = startScrollLeft - walk;
+        });
+    </script> *@
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel();
+        });
+    </script>
+</body>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<style>
+    .text-center{
+        height: 100vh;
+        background-image: url('Content/Sectiondomain.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .text-center img {
+      height: 100%
+    }
+    .card-progame{
+     /*    position:absolute; */
+        height: 200px;
+    }
+    .card-item-progame{
+        width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 20px;
+        height: 100%
+    }
+
+    .programe-title{
+        height: 50px;
+        margin-left: 15%;
+        margin-top: 90px;
+        border-radius: 20px;
+        text-align: left;
+    }
+    .button-progame{
+        line-height: 31px;
+        height: 100%;
+        background-color: #411C6B;
+        border-radius:4px;
+        color:#fff;
+        font-weight:600;
+        padding : 8px 15px;
+        display: inline-block;
+    }
+    .button-progame::after {
+            content: "";
+            position: absolute;
+            left: calc(20% + 200);
+         /*    bottom: 50%; */
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            top: 115px;
+            margin-left: 15px
+
+    }
+
+    .item-visa-company{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 93px;
+    }
+
+    .item-visa-high-school{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 93px;
+    }
+
+    .item-visa-E9{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 93px;
+    }
+
+    .item-visa-masters {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 93px;
+    }
+
+    .header-view-partner{
+     /*    background-color: #2d124df5; */
+        background: linear-gradient(30deg, rgb(148 73 172), rgb(50 50 148), rgb(103 56 205));
+        height: 40vh;
+        min-height: 400px
+     /*    width: 60%;
+        margin: auto */
+
+    }
+    .header-view-partner span {
+        color: #ffff
+    }
+
+    .title-partner{
+        display: flex;
+        justify-content: center;
+        font-size: 36px;
+        padding: 40px 20px 20px 20px;
+        font-weight: 500
+    }
+
+    .des-partner {
+        display: flex;
+        justify-content: center;
+        font-size: 20px
+    }
+
+    .card-partner{
+        width: 300px;
+        height: 400px;
+        position: relative;
+        border-radius: 15px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .img-school-partner{
+        max-width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .img-korea{
+        position: absolute;
+        left: 1px;
+        top: 35%
+    }
+
+    .main-partner {
+        background-color: #fff;
+        display: flex;
+        /*  align-items:center; */
+        overflow: hidden;
+        padding: 40px 40px 60px 40px;
+        background-color: transparent;
+        position: absolute;
+        top: 26%;
+        user-select: none;
+        white-space: nowrap;
+        cursor: grab;
+     
+    }
+    .card-partner{
+        margin-left: 30px;
+        margin-right: 30px;
+        width: 320px;
+        transition: transform 0.3s ease;
+        word-wrap: break-word;
+        white-space: nowrap;
+    }
+
+    .card-partner:hover {
+        transform: scale(1.2);
+    }
+
+    .view-partner{
+        position: relative;
+        height: 80vh;
+        overflow: hidden;
+     /*    width: 900px; */
+    }
+
+    .students-comments{
+        height: 80vh;
+        background-image: url('Content/section.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .activities-info{
+        height: 100vh;
+        background-color: yellow;
+        position: relative;
+    }
+    .main-card{
+        width: 100%;
+        padding: 20px;
+        height: 50%;
+      /*   word-wrap: break-word;
+        white-space: nowrap; */
+    }
+
+    .des-school{
+        height: 100%;
+        width: 100%;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+    }
+
+</style>
+<head>
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+</head>
+<body>
+<div class="text-center row">
+        <div class="programe-title col-12">
+            <div class="button-progame">
+                CHƯƠNG TRÌNH CỦA KIPA
+            </div>
+        </div>
+        <div class="item-visa-company card-progame  col-6">
+            <div class="card-item-progame animated bounceInLeft" style="animation-delay: 1s">
+                <span class="title-copany">
+                    Đào tạo tiếng Hàn doanh nghiệp
+                </span>
+            </div>
+        </div>
+        <div class="item-visa-E9 card-progame col-6">
+            <div class="card-item-progame  animated bounceInRight" style="animation-delay: 2s">
+            <span class="title-E9">
+                Đào tạo E9 về nước
+            </span>
+            </div>
+        </div>
+        <div class="item-visa-high-school card-progame col-6">
+            <div class="card-item-progame animated bounceInLeft" style="animation-delay: 3s">
+            <span class="title-school">
+                Du học cấp 3
+            </span>
+            </div>
+        </div>
+        <div class="item-visa-masters card-progame col-6">
+            <div class="card-item-progame animated bounceInRight" style="animation-delay: 4s">
+            <span class="title-master">
+                Du học thạc sỹ
+            </span>
+            </div>
+        </div>
+</div>
+    <div class="view-partner" id="view-partner">
+    <div class="header-view-partner">
+        <span class="title-partner">CÁC TRƯỜNG ĐẠI HỌC LIÊN KẾT</span>
+        <span class="des-partner">
+                Kipa tự hào là đối tác tuyển sinh và có mối quan
+                hệ hợp tác với các trường đại học uy tín Hàn Quốc
+        </span>
+    </div>
+        <div class="main-partner animated fadeInUp" style="animation-delay: 1s" id="main-partner">
+        <div class="card-partner">
+                <img class="img-school-partner" src="~/Content/school.png">
+                <div class="main-card" >
+                    <div class="title-school">Đại học Hàn Quốc</div>
+                    <div class="des-school">
+                        <span>  Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay </span>
+                        </div>
+               </div>
+                <img class="img-korea" src="~/Content/korie.png">
+        </div>
+            <div class="card-partner">
+                <img class="img-school-partner" src="~/Content/school.png">
+                <div class="main-card">
+                    <div class="title-school">Đại học Hàn Quốc</div>
+                    <div class="des-school">Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay</div>
+                </div>
+                <img class="img-korea" src="~/Content/korie.png">
+            </div>
+            <div class="card-partner">
+                <img class="img-school-partner" src="~/Content/school.png">
+                <div class="main-card">
+                    <div class="title-school">Đại học Hàn Quốc</div>
+                    <span class="des-school">Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay</span>
+                </div>
+                <img class="img-korea" src="~/Content/korie.png">
+            </div>
+            <div class="card-partner">
+                <img class="img-school-partner" src="~/Content/school.png">
+                <div class="main-card">
+                    <div class="title-school">Đại học Hàn Quốc</div>
+                    <div class="des-school">Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay</div>
+                </div>
+                <img class="img-korea" src="~/Content/korie.png">
+            </div>
+            <div class="card-partner">
+                <img class="img-school-partner" src="~/Content/school.png">
+                <div class="main-card">
+                    <div class="title-school">Đại học Hàn Quốc</div>
+                    <div class="des-school">Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay</div>
+                </div>
+                <img class="img-korea" src="~/Content/korie.png">
+            </div>
+            <div class="card-partner">
+                <img class="img-school-partner" src="~/Content/school.png">
+                <div class="main-card">
+                    <div class="title-school">Đại học Hàn Quốc</div>
+                    <div class="des-school">Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay</div>
+                </div>
+                <img class="img-korea" src="~/Content/korie.png">
+            </div>
+            <div class="card-partner">
+                <img class="img-school-partner" src="~/Content/school.png">
+                <div class="main-card">
+                    <div class="title-school">Đại học Hàn Quốc</div>
+                    <div class="des-school">Đại học Hàn Quốc là đại học hàng đầu tại hàn quốc, được xem là ngôi trường đáng học tập nhất hiện nay</div>
+                </div>
+                <img class="img-korea" src="~/Content/korie.png">
+            </div>
+    </div>
+</div>
+    <div class="students-comments">
+        <div class="programe-title col-12">
+            <div class="button-progame">
+              CẢM NHẬN CỦA HỌC VIÊN
+            </div>
+        </div>
+
+</div>
+
+    <div class="activities-info">
+        <div class="programe-title col-12">
+            <div class="button-progame">
+                HOẠT ĐỘNG Ở KIPA
+            </div>
+        </div>
+        <div class="conntent-activities row">
+            <div class="content-left col-6">
+                <img class="img-school-partner" src="~/Content/school.png">
+                <div class="title-content-left">
+                    CHƯƠNG TRÌNH GIAO LƯU VĂN HÓA VIỆT - HÀN | THPT VIỆT ĐỨC VÀ THPT GIMCHEON
+                </div>
+                <div class="content-right col-6">Chương trình diễn ra với các hoạt động giao lưu văn hóa - thể thao - nghệ thuật như: trình diễn Taekwondo, giao hữu bóng rổ, nhảy dây, tặng quà lưu niệm,...Học sinh hai trường đã có khoảng thời gian đáng nhớ trong buổi sáng vừa qua. </div>
+                <div class="show-more">Xem thêm</div>
+            </div>
+            <div class="content-right col-6">
+                <div class="card-content-activities row">
+                    <div class="col-4">
+                        <img class="img-school-partner" src="~/Content/school.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="title-content-left">
+                            CHƯƠNG TRÌNH GIAO LƯU VĂN HÓA VIỆT - HÀN | THPT VIỆT ĐỨC VÀ THPT GIMCHEON
+                        </div>
+                        <div class="content-right col-6">Chương trình diễn ra với các hoạt động giao lưu văn hóa - thể thao - nghệ thuật như: trình diễn Taekwondo, giao hữu bóng rổ, nhảy dây, tặng quà lưu niệm,...Học sinh hai trường đã có khoảng thời gian đáng nhớ trong buổi sáng vừa qua. </div>
+                        <div class="show-more">Xem thêm</div>
+                    </div>
+                </div>
+                <div class="card-content-activities row">
+                    <div class="col-4">
+                        <img class="img-school-partner" src="~/Content/school.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="title-content-left">
+                            CHƯƠNG TRÌNH GIAO LƯU VĂN HÓA VIỆT - HÀN | THPT VIỆT ĐỨC VÀ THPT GIMCHEON
+                        </div>
+                        <div class="content-right col-6">Chương trình diễn ra với các hoạt động giao lưu văn hóa - thể thao - nghệ thuật như: trình diễn Taekwondo, giao hữu bóng rổ, nhảy dây, tặng quà lưu niệm,...Học sinh hai trường đã có khoảng thời gian đáng nhớ trong buổi sáng vừa qua. </div>
+                        <div class="show-more">Xem thêm</div>
+                    </div>
+                </div>
+                <div class="card-content-activities row">
+                    <div class="col-4">
+                        <img class="img-school-partner" src="~/Content/school.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="title-content-left">
+                            CHƯƠNG TRÌNH GIAO LƯU VĂN HÓA VIỆT - HÀN | THPT VIỆT ĐỨC VÀ THPT GIMCHEON
+                        </div>
+                        <div class="content-right col-6">Chương trình diễn ra với các hoạt động giao lưu văn hóa - thể thao - nghệ thuật như: trình diễn Taekwondo, giao hữu bóng rổ, nhảy dây, tặng quà lưu niệm,...Học sinh hai trường đã có khoảng thời gian đáng nhớ trong buổi sáng vừa qua. </div>
+                        <div class="show-more">Xem thêm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+  @*   <script>
+        let isDragging = false;
+        let startX;
+        let startScrollLeft;
+
+        const content = document.getElementById('main-partner');
+
+        content.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.pageX - content.offsetLeft;
+            startScrollLeft = content.scrollLeft;
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - content.offsetLeft;
+            const walk = (x - startX);
+            content.scrollLeft = startScrollLeft - walk;
+        });
+    </script> *@
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel();
         });
     </script>
 </body>

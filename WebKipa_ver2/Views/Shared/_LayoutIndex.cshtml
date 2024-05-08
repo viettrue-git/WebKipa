@@ -6,22 +6,22 @@
         overflow-x: hidden
     }
 
-    .container-fluid{
-        padding-left: 100px  !important;
+    .container-fluid {
+        padding-left: 100px !important;
         padding-right: 0 !important;
     }
 
     header {
-      /*   margin: auto;
-        display:flex; */
+        /*   margin: auto;
+            display:flex; */
         grid-template-columns: 50px 1fr 50px;
         grid-template-rows: 50px;
         justify-content: center;
         align-items: center;
-       /*  position: relative; */
+        /*  position: relative; */
         z-index: 100;
         height: 110px;
-        position:fixed;
+        position: fixed;
         left: 0;
         right: 10%
     }
@@ -29,10 +29,11 @@
     .navbar {
         background-color: #fff;
         font-size: 24px;
-      /*   border-radius: 16px;
-        margin: 20px; */
+        /*   border-radius: 16px;
+            margin: 20px; */
         height: 110px;
     }
+
     .navbar-toggler {
         border: none !important;
         font-size: 1.25rem;
@@ -43,69 +44,68 @@
             outline: none !important;
         }
 
-    .img-logo-header{
-
+    .img-logo-header {
     }
 
     .multi-language-button {
         border: none !important;
         padding: 0 !important;
     }
-   
-.nav-link{
-    color: red;
-    font-weight: 500;
-    position: relative;
 
-}
-.nav-link:hover, .nav-link:active{
-    color:#000;
-}
+    .nav-link {
+        color: red;
+        font-weight: 500;
+        position: relative;
+    }
 
-.nav-link::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-   height: 3px;
-   background-color: #411C6B;
-   visibility:hidden;
-   transition: 0.3s ease-in-out;
-}
+        .nav-link:hover, .nav-link:active {
+            color: #000;
+        }
+
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background-color: #411C6B;
+            visibility: hidden;
+            transition: 0.3s ease-in-out;
+        }
 
         .nav-link:hover:before, .nav-link:active::before {
             width: 100%;
             visibility: visible;
         }
-   
-   
 
-    .carousel-item{
+
+
+    .carousel-item {
         height: 100vh;
         min-height: 300px;
         background: no-repeat center center scroll;
-/*         -webkit-background-size: cover; */
+        /*         -webkit-background-size: cover; */
         background-size: cover
     }
 
-    .carousel-caption{
-        bottom:30% !important; 
-        left:20% !important;
+    .carousel-caption {
+        bottom: 30% !important;
+        left: 20% !important;
         color: black !important;
         right: auto !important
     }
 
-    .carousel-caption  h5{
-        font-size: 45px;
-        text-transform:uppercase;
+        .carousel-caption h5 {
+            font-size: 45px;
+            text-transform: uppercase;
+        }
 
-    }
-    .carousel-caption p {
-        width: 60%;
-        margin:auto;
-     }
+        .carousel-caption p {
+            width: 60%;
+            margin: auto;
+        }
 
     .footer-web {
         height: 35vh;
@@ -140,18 +140,17 @@
         font-size: 20px
     }
 
-    .title-company{
+    .title-company {
         font-size: 24px;
-        font-weight:500;
+        font-weight: 500;
         color: #411C6B
     }
 
-    .total-phone{
+    .total-phone {
         position: relative;
-
     }
 
-    .phone-des{
+    .phone-des {
         position: absolute;
         left: 150px;
         top: 0
@@ -171,7 +170,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -180,7 +179,7 @@
                 <a class="navbar-brand me-auto" href="@Url.Action("Index", "Home")">
                     <img class="img-logo-header" src="~/Content/logoHG.jpg">
                 </a>
-           
+
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
@@ -194,26 +193,33 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" href="#">Chương trình du học</a>
+                                <a class="nav-link mx-lg-2" href="@Url.Action("Index", "HighSchool")">Chương trình du học</a>
                             </li>
-                                <li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link mx-lg-2" href="#">Đào tạo tiếng hàn</a>
                             </li>
-                                <li class="nav-item">
-                                <a class="nav-link mx-lg-2" href="#">Visa</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link mx-lg-2">Visa</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Visa D4</a></li>
+                                    <li><a class="dropdown-item" href="#">Visa D</a></li>
+                                    <li><a class="dropdown-item" href="#">Visa D10</a></li>
+                                    <li><a class="dropdown-item" href="#">Visa E7</a></li>
+
+                                </ul>
                             </li>
-                                <li class="nav-item">
-                               @*  @Html.ActionLink("Đăng ký tư vấn", "Index", "SignUpConsultation") *@
+                            <li class="nav-item">
+                                @*  @Html.ActionLink("Đăng ký tư vấn", "Index", "SignUpConsultation") *@
                                 <a class="nav-link mx-lg-2" href="@Url.Action("Index", "SignUpConsultation")">
                                     Liên hệ tư vấn
-                                    </a>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                    <button class="multi-language-button ">
+                <button class="multi-language-button ">
                     <img class="img-logo-language" src="~/Content/MultiLanguage.jpg">
-                    </button>
+                </button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -271,10 +277,10 @@
             <div class="address-info col-5 row">
                 <div class="col-12 title-company">
                     Công ty cổ phần giao lưu văn hóa Hoàng gia Hàn – Việt R&I
-                    </div>
+                </div>
                 <div class="col-12 des-address">
-                        Địa chỉ: số 25, Lô A20, Khu geleximco, An Khánh, Hoài Đức, Hà Nội
-                    </div>
+                    Địa chỉ: số 25, Lô A20, Khu geleximco, An Khánh, Hoài Đức, Hà Nội
+                </div>
                 <div class="col-12 total-phone ">
                     Số điện thoại:
                     <div class="phone-des">
@@ -283,17 +289,17 @@
                     </div>
 
                 </div>
-          @*   <div class="col-3 info-social-network">
+                @*   <div class="col-3 info-social-network">
                 Facebook
-            </div> *@
-        </div>
+                </div> *@
+            </div>
 
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var myCarousel = document.querySelector('#carouselExampleCaptions');
             var carousel = new bootstrap.Carousel(myCarousel, {
-                interval: 5000 
+                interval: 5000
             });
         });
     </script>
