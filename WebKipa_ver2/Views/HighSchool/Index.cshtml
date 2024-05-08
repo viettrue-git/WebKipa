@@ -1,0 +1,374 @@
+﻿@{
+    ViewData["Title"] = "Du học cấp 3";
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+}
+<style>
+    .study-abroad-high-school {
+        width: 80%;
+        margin: 20px auto;
+        padding: 30px;
+        color: #411C6B;
+    }
+
+    .card-progame-study {
+        width: 100%;
+        padding: 20px;
+        color: #411C6B;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 6px
+    }
+
+    .card-pro {
+        padding: 10px;
+        margin: 10px;
+        color: white;
+        background-color: #411C6B;
+        border-radius: 6px;
+        font-size: 14px
+    }
+
+    .title-card-progame {
+        color: #411C6B;
+        font-weight: 600;
+    }
+
+    .img-vector {
+        margin-right: 10px
+    }
+
+    .card-content-letter {
+        width: 100%;
+        padding: 20px;
+        color: #411C6B;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 6px
+    }
+
+    .f-600 {
+        font-weight: 600
+    }
+
+    .d-block {
+        display: block;
+    }
+
+    .a-link-page {
+        text-decoration: none;
+        margin: 10px;
+        color: #411C6B;
+    }
+
+    .style-type-none {
+        list-style-type: none;
+        padding-left: 5px
+    }
+
+    .a-link-page:hover {
+        font-weight: 600
+    }
+
+    .title-page {
+        font-size: 28px;
+        text-align: center;
+        font-weight: 600
+    }
+
+    .line-20 {
+        line-height: 2
+    }
+
+    .reson-study {
+    }
+
+    .list-reson-study {
+    }
+
+    .option-reson {
+        font-weight: 600
+    }
+
+    .ml-50 {
+        margin-left: 50px
+    }
+
+    .ml-70 {
+        margin-left: 70px
+    }
+
+    .order-number-title {
+        font-size: 20px
+    }
+
+    .content-section {
+        padding: 5px 20px;
+    }
+
+    .img-page {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .span-des-image {
+        text-align: center;
+        color: gray;
+        font-style: italic;
+        font-size: 16px
+    }
+
+    .div-image-page {
+        display: flex
+    }
+
+    .title-child-page {
+        font-weight: 600;
+        margin-bottom: 10px;
+        padding-top:10px;
+        padding-bottom: 10px
+    }
+    .des-child-page{
+        margin-left:20px
+    }
+</style>
+<body>
+    <div class="study-abroad-high-school row">
+        <div class="left-high-school col-3">
+            <div class="card-content-letter" id="card-content-letter">
+                <div class="title-left-link f-600">Nội dung công việc</div>
+                <ul class="pt-3 style-type-none">
+                    <li><a href="#section1" class="a-link-page d-block">1. Điều kiện để đi du học thạc sĩ tại Hàn Quốc</a></li>
+                    <li><a href="#section2" class="a-link-page d-block">2. Hồ sơ du học thạc sĩ Hàn Quốc</a></li>
+                    <li><a href="#section3" class="a-link-page d-block">3. Thời gian học thạc sĩ tại Hàn Quốc</a></li>
+                    <li><a href="#section4" class="a-link-page d-block">4. Học phí du học thạc sĩ Hàn Quốc</a></li>
+                    <li><a href="#section5" class="a-link-page d-block">5. Lộ trình Du học Thạc sĩ ở Hàn Quốc</a></li>
+                    <li><a href="#section6" class="a-link-page d-block">6. Học bổng du học Thạc sĩ Hàn Quốc</a></li>
+                    <li><a href="#section7" class="a-link-page d-block">7. Nên học thạc sĩ ngành nào tại Hàn Quốc</a></li>
+                    <li><a href="#section8" class="a-link-page d-block">8. Hình ảnh sinh viên KIPA học tập thạc sỹ tại Hàn Quốc</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="center-high-school col-7">
+            <div class="Introduce-progame ">
+                <span class="title-page d-block">D2-3: DU HỌC THẠC SỸ</span>
+                <div class="line-20 pt-3 reson-study">
+                    Du học thạc sỹ Hàn Quốc đang tạo được cơn sốt cho rất nhiều bạn trẻ quan tâm vì lý do:
+                    <div class="line-20 list-reson-study ml-50">
+                        • Đa dạng chương trình lựa chọn phụ thuộc vào nhiều mục đích khác nhau:
+                        <div class="option-reson ml-70">
+                            <span class="d-block line-20">-	Hệ thạc sĩ chính quy / đặc biệt/ chuyên môn</span>
+                            <span class="d-block line-20">-	Hệ thạc sĩ yêu cầu TOPIK / nợ TOPIK </span>
+                            <span class="d-block line-20">- Hệ thạc sĩ thư mời / Visa code/ E -Visa  </span>
+                            <span class="d-block line-20">-	Hệ thạc sĩ English Track – Korean Track </span>
+                        </div>
+                    </div>
+                    <div class="line-20 list-reson-study ml-50">• Chính sách học bổng hấp dẫn, học phí ưu đãi. </div>
+                    <div class="line-20 list-reson-study ml-50">• Thời gian học trên trường ít.</div>
+                    <div class="line-20 list-reson-study ml-50">• Số giờ làm thêm CAO NHẤT trong các hệ du học tại Hàn Quốc.</div>
+                </div>
+                <span class="line-20">Vì vậy hãy cùng KIPA tìm hiểu du học Hàn Quốc hệ thạc sĩ qua bài viết sau đây thì cần những điều kiện gì? chi phí ra sao? và nên chọn ngành gì học thì phù hợp.</span>
+            </div>
+            <div id="section1">
+                <div class="line-20 pt-3 order-number-title f-600">1. Điều kiện để đi du học thạc sĩ tại Hàn Quốc</div>
+                <div class="content-section">
+                    <div>
+                        Nếu bạn đi du học Hàn Quốc hệ thạc sĩ, bạn sẽ được cấp visa loại D2-3. Để có được visa này, bạn phải đạt đầy đủ các điều kiện sau:
+                        <span class="d-block line-20  ml-50">•	Ứng viên và bố mẹ không mang quốc tịch Hàn Quốc.</span>
+                        <span class="d-block line-20  ml-50">•	Tốt nghiệp Đại học tại Việt Nam.</span>
+                    </div>
+                    <div>
+                        <span class="title-child-page"> 1.1. Chương trình nợ TOPIK hoặc TOPIK 2</span>
+                        <span class="des-child-page d-block line-20">Với chương trình nợ TOPIK hoặc TOPIK 2: </span>
+                        <span class="d-block line-20 ml-50">•	Lúc đăng ký không cần TOPIK nhưng sẽ có thời gian đào tạo và thi đạt yêu cầu từ phía nhà trường để có thể nhận được thư thông báo đóng học phí</span>
+                        <span class="d-block line-20 ml-50">•	Yêu cầu các bạn phải đạt được TOPIK 4 trước khi ra trường.</span>
+                        <span class="d-block line-20 ml-50">•	Đã tốt nghiệp đại học (bằng chính quy, tại chức, liên thông đều được chấp thuận). Tuy nhiên, một vài trường top đầu chỉ chấp nhận bằng chính quy.</span>
+                        <span class="d-block line-20 ml-50">•	Độ tuổi từ 21 đến 35.</span>
+                        <p class="d-block line-20 ml-50">• Có chứng chỉ tiếng Hàn TOPIK 4 trở lên. Tuy nhiên, một số chuyên ngành bên nghệ thuật, thể dục chấp nhận bằng TOPIK 2. Nếu không yêu cầu TOPIK thì trường sẽ yêu cầu bằng tiếng Anh (TOEFL iBT 80, IELTS 6.0, TEPS 551). Đối với E-visa thì không cần. Một số ngành chỉ yêu cầu học tiếng tại Việt Nam 480 giờ sau đó nhập học tiếng Hàn với Visa D4-1. Khi hoàn thành khóa học tiếng tại Hàn và đạt topik thì bạn có thể chuyển lên học hệ thạc sĩ.</p>
+                        <span class="d-block ml-50">• Có sức khỏe tốt. Không mắc bệnh truyền nhiễm, lao phổi.</span>
+                        <span class="d-block ml-50">• Không nằm trong diện bị hạn chế xuất nhập cảnh. Không bị cấm nhập cảnh vào Hàn Quốc</span>
+                        <img class="img-page d-block pt-3" src="~/Content/heath.jpg">
+                        <span class="d-block span-des-image">Học sinh tham gia khám lao phổi tại bệnh viện Hồng Ngọc</span>
+                    </div>
+                    <div class="">
+                        <span class="title-child-page mt-4"> 1.2. Chương trình du học E- VISA</span>
+                        <img class="img-page d-block pt-3" src="~/Content/photo2.jpg">
+                        <span class="d-block span-des-image">Học sinh kipa du học chương trình E-VISA</span>
+                        <div>
+                            <span class="f-600  pt-2">ƯU ĐIỂM:</span>
+                            <span  class="d-block line-20 ml-50">• Thời hạn visa : 2 năm</span>
+                            <span class="d-block line-20 ml-50">• Nhận các vùng miền và có độ tuổi lên đến 32 tuổi.</span>
+                            <span class="d-block line-20 ml-50">• Với nhiều học bổng từ 30% ~ 100% học phí.</span>
+                            <span class="d-block line-20 ml-50">• Đặc biệt một tuần học có 1-2 buổi lên lớp, thời gian học linh hoạt</span>
+                            <span class="d-block line-20 ml-50">• Được bảo lãnh người thân: bố, mẹ, vợ, chồng, con sang thăm thân</span>
+                            <span class="d-block line-20 ml-50">• Sau tốt nghiệp được hỗ trợ chuyển đổi sang E7 hoặc F2 ( visa vĩnh trú)</span>
+                            <span class="d-block line-20 ml-50">• Cho nợ Topik</span>
+
+                        </div>
+                        <div>
+                            <span class="f-600  pt-2">ĐIỀU KIỆN TUYỂN SINH:</span>
+                            <span class="d-block line-20 ml-50">• Nam/nữ dưới 32 tuổi</span>
+                            <span class="d-block line-20 ml-50">• Đã tốt nghiệp Đại Học </span>
+                            <span class="d-block line-20 ml-50">• Không phân biệt vùng miền</span>
+                        </div>
+                        <div>
+                            <span class="f-600 pt-2">NHIỀU NGÀNH HẤP DẪN:</span>
+                            <span class="d-block line-20 ml-50">• Ngành Hàn Quốc Học</span>
+                            <span class="d-block line-20 ml-50">• Ngành Quản trị kinh doanh</span>
+                            <span class="d-block line-20 ml-50">• Ngành Quản trị du lịch</span>
+                            <span class="d-block line-20 ml-50">• Ngành Phúc lợi xã hội</span>
+                            <span class="d-block line-20 ml-50">• Ngành Nông nghiệp thông minh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section2">
+                <div class="line-20 pt-3 order-number-title f-600">2. Hồ sơ du học thạc sĩ Hàn Quốc</div>
+                <div class="content-section">
+                    <img class="img-page d-block pt-3" src="~/Content/campus.jpg">
+                    <div class="pt-4">
+                        Hồ sơ chính là yếu tố tiên quyết trong quá trình trường xét tuyển bạn. Một bộ hồ sơ tốt đồng nghĩa tỷ lệ đậu vào trường rất cao. Vậy nên hãy chuẩn bị bộ hồ sơ của chính mình một cách tốt nhất để ước mơ có thể trở thành hiện thực. Dưới đây là những hồ sơ bắt buộc bạn phải chuẩn bị:
+                        <span class="d-block line-20 ml-50 f-600">1. Bằng tốt nghiệp Đại học</span>
+                        <span class="d-block line-20 ml-50 f-600">2. Chứng chỉ ngoại ngữ (TOPIK 4 trở lên, IELTS 6.0, TOEFL, TEPS)</span>
+                        <span class="d-block line-20 ml-50 f-600">3. Đơn nhập học (theo mẫu của trường)</span>
+                        <span class="d-block line-20 ml-50 f-600">4. Thư giới thiệu</span>
+                        <span class="d-block line-20 ml-50 f-600">5. Kế hoạch học tập, giới thiệu bản thân, kế hoạch nghiên cứu…..</span>
+                        <span class="d-block line-20 ml-50 f-600">6. Bản sao chứng minh nhân dân của ứng viên và bố mẹ</span>
+                        <span class="d-block line-20 ml-50 f-600">7. Hộ khẩu</span>
+                        <span class="d-block line-20 ml-50 f-600">8. Giấy khai sinh</span>
+                        <span class="d-block line-20 ml-50 f-600">9. Giấy chứng nhận khác (nếu có)</span>
+                        <span class="d-block line-20 ml-50 f-600">10. Sổ tiết kiệm 20,000 USD trở lên</span>
+                        <span class="d-block line-20 ml-50 f-600">11. Giấy tờ chứng minh tài chính gia đình</span>
+                    </div>
+                </div>
+            </div>
+            <div id="section3">
+                <div class="line-20 pt-3 order-number-title f-600">3. Thời gian học thạc sĩ tại Hàn Quốc</div>
+                <div class="content-section">
+                       <img class="img-page d-block pt-3" src="~/Content/study.jpg">
+                <span class="d-block span-des-image">Học sinh KIPA trong tiết học cùng với các sinh viên khác tại Hàn Quốc</span>
+                <p class="pt-3">- Chương trình học Thạc sĩ tại Hàn Quốc thường có thời gian đào tạo tối thiểu là 2 năm. Với từng chuyên ngành thì số lượng tín chỉ cũng như chương trình học khác nhau nhưng nhìn chung bạn thường phải hoàn thành khoảng 24 tín chỉ (tương đương 48 tín chỉ ECTS).</p>
+                <p>- Sau khi hoàn thành chương trình học bạn phải làm một bài kiểm tra chất lượng vào kỳ thi cuối cùng cũng như nghiên cứu và trình bày luận thạc sĩ trước hội đồng chấm thi (có ít nhất 3 giám khảo chấp nhận mới đủ điều kiện nhận bằng và tốt nghiệp, nếu trượt thì 6 tháng sau trình bày lại).</p>
+                <div>
+                    <span class="f-600">  Chương trình học tại Hàn Quốc trong một năm thường chia làm 2 kỳ học:</span>
+                    <span class="d-block line-20 ml-50">•	Kỳ 1: Từ tháng 3 đến tháng 6</span>
+                    <span class="d-block line-20 ml-50">•	Kỳ 2: Từ tháng 9 đến tháng 12</span>
+                        <img class="img-page d-block pt-3" src="~/Content/semester.jpg">
+                        <span class="d-block span-des-image">Sinh viên Kipa trong chương trình hoạt động ngoại khóa tại trường</span>
+                    <div>
+                        <span class="f-600">Mỗi năm có 2 kỳ nghỉ chính:</span>
+                        <span class="d-block line-20 ml-50">•	Kỳ nghỉ hè: Từ tháng 7 đến tháng 8</span>
+                        <span class="d-block line-20 ml-50">•	Kỳ nghỉ đông: Từ tháng 1 đến tháng 2 </span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div id="section4">
+                <div class="line-20 pt-3 order-number-title f-600">4. Học phí du học thạc sĩ Hàn Quốc</div>
+                <div class="content-section">
+                    Học phí cho chương trình thạc sĩ tại Hàn Quốc dao động từ khoảng <span class="f-600">$3,000 - $10,000 USD</span>   mỗi năm. Tuy nhiên, các chương trình tiên tiến hơn, chẳng hạn như MBA, có thể lên đến $30,000 USD mỗi năm.
+                    <span class="d-block line-20 ml-50">•	Phí đăng ký xét duyệt hồ sơ:<span class="f-600">50,000 - 100,000 KRW</span>  (chỉ nộp 1 lần duy nhất trong 1 năm học)</span>
+                    <span class="d-block line-20 ml-50">•	Phí nhập học: <span class="f-600">500,000 - 900,000 KRW</span>  (chỉ nộp 1 lần duy nhất trong 1 năm học)</span>
+                    <span class="d-block line-20 ml-50">•	Học phí (trường Đại học Quốc gia): <span class="f-600">3,000,000 - 7,000,000 KRW/kỳ</span> </span>
+                    <span class="d-block line-20 ml-50">•	Học (trường tư):<span class="f-600">3,000,000 - 10,000,000 KRW/kỳ</span> </span>
+                    <span class="d-block line-20 ml-50">•	Bảo hiểm 1 năm: <span class="f-600">~200,000 KRW</span></span>
+                    <span class="d-block line-20 ml-50">•	Bên cạnh học phí thì bạn cũng phải chuẩn bị cho những chi phí khác như: nhà ở, ăn uống, đi lại, mua sắm,…</span>
+                </div>
+            </div>
+            <div id="section5">
+                <div class="line-20 pt-3 order-number-title f-600"> 5. Lộ trình Du học Thạc sĩ ở Hàn Quốc</div>
+                <div class="content-section">
+                    <span class="title-child-page pt-4"> 5.1.  Học tiếng Hàn và thạc sĩ tại Hàn Quốc</span>
+                    <span class="d-block line-20 ml-50"><span class="f-600">Bước 1 :</span> <span>Các bạn chuẩn bị hồ sơ ứng tuyển hệ tiếng tại trường Đại học</span></span>
+                    <span class="d-block line-20 ml-50"><span class="f-600">Bước 2 :</span><span>Nộp hồ sơ xin Visa học tiếng tại Hàn Quốc  là D4-1. </span></span>
+                    <span class="d-block line-20 ml-50"><span class="f-600">Bước 3 :</span> <span>Đạt TOPIK 3 trở lên, ưu tiên có TOPIK 4 > thì khả năng chọn trường và học tập tại Hàn Quốc sẽ tốt hơn. </span></span>
+                    <span class="d-block line-20 ml-50"><span class="f-600">Bước 4 :</span> <span>Đăng ký hệ Thạc sĩ tại Hàn Quốc.</span></span>
+                    <span class="d-block line-20 ml-50"><span class="f-600">Bước 5 :</span><span>Chuyển tiếp Visa D4-1 sang Visa D2-3. </span></span>
+                    <span class="title-child-page pt-4"> 5.2.  Học thẳng lên hệ thạc sĩ tại Hàn Quốc</span>
+                    <div>
+                        <span class="f-600 ml-50">• Hệ Thạc Sĩ yêu cầu TOPIK</span>
+                        <span class="d-block line-20 ml-70"> <span class="f-600">Bước 1 : </span>Bạn cần có bằng TOPIK theo yêu cầu của nhà trường</span>
+                        <span class="d-block line-20 ml-70"> <span class="f-600">Bước 2 :</span>Làm hồ sơ ứng tuyển chương trình Thạc sĩ tại Hàn Quốc</span>
+                        <span class="d-block line-20 ml-70"> <span class="f-600">Bước 3 :</span>Nhập học với theo quy trình của nhà trường</span>
+                    </div>
+                    <span class="f-600 ml-50 pt-2">• Hệ Thạc Sĩ nợ TOPIK, E Visa</span>
+                    <div>
+                        <span class="d-block line-20 ml-70"><span class="f-600">Bước 1 :</span>Vượt qua kỳ thi tiếng của nhà trường</span>
+                        <span class="d-block line-20 ml-70"><span class="f-600">Bước 2 :</span>Hoàn thiện hồ sơ để nộp trường và nhận visa code</span>
+                        <span class="d-block line-20 ml-70"><span class="f-600">Bước 3 :</span>Nhận kết quả Visa và nhập học </span>
+                    </div>
+
+                </div>
+            </div>
+            <div id="section6">
+                <div class="line-20 pt-3 order-number-title f-600">6. Học bổng du học Thạc sĩ Hàn Quốc</div>
+                <div class="content-section">
+                    <img class="img-page d-block pt-3" src="~/Content/scholarship.jpg">
+                    <span class="d-block span-des-image">Học bổng dành cho chương trình thạc sỹ của trường Soongsil</span>
+                    <span>
+                        <span>
+                            Chương trình du học Thạc sĩ Hàn Quốc
+                        </span>
+                        thường có nhiều học bổng khác nhau. Nhưng thường các bạn sẽ nhận được học bổng theo TOPIK hoặc trình độ tiếng Anh từ 30% – 100% học phí học kỳ đầu tiên. Sau đó có học bổng duy trì dành cho các kỳ sau, sẽ dựa vào thành tích học tập của kỳ trước để quyết định các bạn sẽ nhận bao nhiêu % học bổng cho kỳ tiếp theo.
+                    </span>
+                </div>
+            </div>
+            <div id="section7">
+                <div class="line-20 pt-3 order-number-title f-600">7. Nên học thạc sĩ ngành nào tại Hàn Quốc: </div>
+                <div class="content-section">
+                    <span class="title-child-page pt-4"> 7.1. Một số chuyên ngành học thạc sĩ tại Hàn Quốc:</span>
+                    @*     <table>Table một số trường đại học</table> *@
+                    <div>
+                        <span class="title-child-page pt-4"> 7.2. Một số trường đào tạo hệ thạc sĩ bạn có thể tham khảo::</span>
+                        <span class="d-block line-20 ml-50">•	Đại học Sejong</span>
+                        <span class="d-block line-20 ml-50">•	Đại học Kookmin</span>
+                        <span class="d-block line-20 ml-50">•	Đại học Chungang</span>
+                        <span class="d-block line-20 ml-50">•	Đại học Hongik</span>
+                        <span class="d-block line-20 ml-50">•	Đại học Hàn Quốc</span>
+                        <span class="d-block line-20 ml-50">•	Đại học Yonsei</span>
+                        <span class="d-block line-20 ml-50">•	Đại học quốc gia Seoul</span>
+                        <span class="d-block line-20 ml-50">• iện Khoa học và Công nghệ cao cấp Hàn Quốc</span>
+                        <span class="d-block line-20 ml-50">•	Đại học Khoa học và Công nghệ Pohang</span>
+                        <span class="d-block line-20 ml-50">•	Đại học nữ Ewha</span>
+                        <span class="d-block line-20 ml-50">•	Đại học nữ Sungshin</span>
+
+                    </div>
+                </div>
+            </div>
+            <div id="section8" >
+                <div class="line-20 pt-3 order-number-title f-600">8. Hình ảnh sinh viên KIPA học tập thạc sỹ tại Hàn Quốc</div>
+            </div>
+        </div>
+        <div class="right-high-school col-2 mt-3">
+            <div class="card-progame-study">
+                <div class="title-card-progame">Chương trình của KIPA</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png"> Đào tạo tiếng hàn doanh nghiệp</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Đào tạo E9 về nước</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Du học cấp 3</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Du học thạc sỹ</div>
+            </div>
+            <div class="card-progame-study mt-3">
+                <div class="title-card-progame">Visa Hàn Quốc</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Visa D4</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Visa D10</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Visa D2</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Visa E9</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('card-content-letter').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior
+
+            if (e.target.tagName === 'A') {
+                var targetId = e.target.getAttribute('href').substring(1); // Get the ID of the target content section
+                var targetElement = document.getElementById(targetId); // Find the target content section
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll to the target content section smoothly
+                }
+            }
+        });
+
+    </script>
+
+</body>
