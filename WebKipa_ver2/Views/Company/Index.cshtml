@@ -4,33 +4,151 @@
 }
 <style>
     .infomation-company{
-        height: 80vh;
+       /*  height: 80vh; */
         background-color: #fff;
-        padding: 40px 20px;
+        padding: 20px 40px;
+        width: 70%;
+        margin: 20px auto;
     }
 
     .title-company{
         color: #411C6B;
-        font-size: 36px;
-        font-weight: 500;
+        font-size: 28px;
+        font-weight: 600;
         display: flex;
         justify-content: center
     }
 
-    .info-staff{
-        height: 80vh;
-        background-color: rgb(132 92 171 / 15%);
+    .content-company{
+        padding: 20px;
+        width: 100%
     }
 
-    .info-infrastructure{
-        height: 80vh;
+    .des-company{
+        padding: 0 20px;
+    }
+
+    .image-company{
+        padding: 20px 20px 20px 50px;
+
+    }
+    .title-choose{
+        display: flex;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: 600;
+        color: #411C6B;
+    }
+    .des-info-company{
+        font-size: 20px;
+        font-weight: 600;
+        color: #411C6B;
+        padding: 15px 0;
+    }
+
+    .image-company-des{
+        width: 90%
+    }
+
+    .info-staff {
+       /*  height: 80vh; */
+        background-color: rgb(132 92 171 / 15%);
+        padding: 40px;
+       
+    }
+
+    .image-staff{
+        width: 80%;
+        margin: 10px auto
+    }
+
+    .des-staff{
+        width: 80%;
+        margin: 10px auto
+    }
+    .img-LeeWon {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .img-superior {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        border-radius: 4px
+    }
+
+    .card-img-info {
+        display: flex;
+        justify-content: center;
+        position: relative
+    }
+    .d-block{
+        display: block;
+    }
+    .name-staff{
+        font-weight: 700;
+        color: #411C6B;
+        text-align: center;
+    }
+    .des-work-staff{
+        color: #411C6B;
+    }
+
+    .card-des-work{
+        padding: 10px 20px 10px 30px;
+    }
+
+    .info-infrastructure {
         background-color: rgb(132 92 171 / 15%);
         padding: 40px 20px;
     }
 
-    .content-company{
-        padding: 30px auto;
-        width: 70%
+    .service-company {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .header-infrastructure{
+        width: 80%;
+        margin: 10px auto
+    }
+
+    .card-service{
+        position: relative
+    }
+    .div-null{
+        border: 1px solid;
+        height: 190px;
+        width: 190px;
+    }
+
+    .imgage-service{
+        position: absolute;
+        left: 42px;
+        height: 190px;
+        top: -14px;
+    }
+
+    .titl-service{
+        text-align: center;
+        font-weight: 700;
+        color: #411C6B;
+    }
+    .f-600{
+        font-weight: 600
+    }
+
+    .content-service{
+        padding: 10px;
+        color: gray;
+    }
+    .main-service{
+
     }
 </style>
 <head>
@@ -38,56 +156,62 @@
 <body>
     <div class="infomation-company">
         <div class="title-company">
-            Công ty cổ phần giao lưu văn hóa Hoàng gia Hàn – Việt R&I
+            CÔNG TY CỔ PHẦN GIAO LƯU VĂN HÓA HOÀNG GIA HÀN - VIỆT R&I
         </div>
         <div class="content-company row">
-            <div class="des-company col-6">
-                <div>TẠI SAO CHỌN KIPA ? </div>
-                <div>THƯƠNG HIỆU UY TÍN</div>
+            <div class="des-company col-7">
+                <div div class="title-choose">Tại sao chọn Kipa ? </div>
+                <div class="des-info-company pt-3">THƯƠNG HIỆU UY TÍN</div>
                 <span>KIPA với kinh nghiệm nhiều năm trong lĩnh vực đào tạo tiếng Hàn cho nhiều đối tác là doanh nghiệp Hàn Quốc cùng với sự am hiểu sâu sắc về môi trường doanh nghiệp Việt Nam và Hàn Quốc</span>
-                <div>GIẢNG VIÊN CHUYÊN NGHIỆP</div>
+                <div class="des-info-company">GIẢNG VIÊN CHUYÊN NGHIỆP</div>
                 <span>Giáo viên có kinh nghiệm giảng dạy nhiều năm, được đào tạo bài bản, kỹ lưỡng, nhiệt tình, tâm huyết trong công việc giảng day. Đặc biệt, với sự chuẩn bị kỹ càng về mặt kiến thức cũng như giáo trình chúng tôi tin rằng có thể làm hài lòng tới tận người học khó tính nhất.</span>
-                <div>CAM KẾT CHẤT LƯỢNG</div>
+                <div class="des-info-company">CAM KẾT CHẤT LƯỢNG</div>
                 <span>Cam kết chất lượng giáo dục tốt nhất đảm bảo đầu ra đúng với kỳ vọng.</span>
             </div>
-            <div class="image-company col-6">
-                <img class="img-logo-header" src="~/Content/company.jpg">
+            <div class="image-company col-5">
+                <img class="image-company-des" src="~/Content/company.jpg">
             </div>
         </div>
    </div>
     <div class="info-staff row">
-        <div class="title">ĐỘI NGŨ NHÂN SỰ </div>
-        <div class="image-staff row">
-            <img class="img-logo-header col-4" src="~/Content/LeeWon.jpg">
-            <img class="img-logo-header col-4" src="~/Content/ChoiJaeHak.jpg">
-            <img class="img-logo-header col-4" src="~/Content/ParkChangDeok.jpg">
+        <div class="title-company">ĐỘI NGŨ NHÂN SỰ</div>
+        <div class="image-staff row pt-4">
+            <div class="card-img-LeeWon card-img-info col-4">
+                <img class="img-LeeWon " src="~/Content/LeeWon.jpg">
+            </div>
+            <div class="card-img-superior card-img-info  col-4">
+                <img class="img-superior " src="~/Content/ChoiJaeHak.jpg">
+            </div>
+            <div class="card-img-superior card-img-info col-4">
+                <img class="img-superior " src="~/Content/ParkChangDeok.jpg">
+            </div>
         </div>
         <div class="des-staff row">
-            <div class="col-4">
-                <span>Mr. Lee Won</span>
-                <span>Giám đốc Viện văn hóa Hoàng Gia</span>
-                <span>Học vấn : Cử nhân Đại học Công nghệ New York  khoa truyền thông báo chí</span>
-                <span>5/2012 – Chủ tịch Viện văn hóa quốc gia Hàn  Quốc</span>
-                <span>2/2010 – Giám đốc Viện văn hóa Hoàng Gia </span>
+            <div class="col-4 card-des-work">
+                <span class="d-block name-staff">Mr. Lee Won</span>
+                <span class="d-block name-staff">Giám đốc Viện văn hóa Hoàng Gia</span>
+                <span class="d-block des-work-staff pt-2"><span class="f-600">Trình độ học vấn:</span> Cử nhân Đại học Công nghệ New York  khoa truyền thông báo chí</span>
+                <span class="d-block des-work-staff"><span class="f-600">5/2012 </span>– Chủ tịch Viện văn hóa quốc gia Hàn  Quốc</span>
+                <span class="d-block des-work-staff"><span class="f-600">2/2010</span> – Giám đốc Viện văn hóa Hoàng Gia </span>
             </div>
-            <div class="col-4">
-                <span>Choi Jae Hak</span>
-                <span>Trình độ học vấn : ESC Reims (Grandes Ecoles – Trường quản  trị kinh doanh Pháp) , MBA</span>
-                <span>Cử nhân đại học sư phạm đại học Seoul khoa tiéng Pháp</span>
-                <span> 2008-2011 – Viện trưởng Viện nghiên cứu kinh tế NH</span>
-                <span>1/1997-2007 – Phó ban Liên minh Hợp tác xã nông nghiệp</span>
+            <div class="col-4 card-des-work">
+                <span class="d-block name-staff">Choi Jae Hak</span>
+                <span class="d-block des-work-staff pt-2"><span class="f-600">Trình độ học vấn:</span> ESC Reims (Grandes Ecoles – Trường quản  trị kinh doanh Pháp) , MBA</span>
+                <span class="d-block des-work-staff">Cử nhân đại học sư phạm đại học Seoul khoa tiéng Pháp</span>
+                <span class="d-block des-work-staff"> <span class="f-600">2008-2011</span> – Viện trưởng Viện nghiên cứu kinh tế NH</span>
+                <span class="d-block des-work-staff"><span class="f-600">1/1997-2007 </span>– Phó ban Liên minh Hợp tác xã nông nghiệp</span>
             </div>
-            <div class="col-4">
-                <span>ParkChang Deok</span>
-                <span>Trình độ học vấn :Cử nhân Đại học Inha khoa Đa văn hóa</span>
-                <span> Chức vụ: Giám đốc hợp tác giao lưu quốc tế Hiệp hội chuyên  gia xã hội nhân dân Hàn Quốc</span>
-                <span> 1/2020 -nay – Điều hành chương trình thích ứng cơ bản</span>
-                <span> 1/2022-nay – Điều hành chương trình hòa nhập xã hội </span>
+            <div class="col-4 card-des-work">
+                <span class="d-block name-staff">ParkChang Deok</span>
+                <span class="d-block des-work-staff pt-2"><span class="f-600">Trình độ học vấn:</span> Cử nhân Đại học Inha khoa Đa văn hóa</span>
+                <span class="d-block des-work-staff "> <span class="f-600">Chức vụ:</span> Giám đốc hợp tác giao lưu quốc tế Hiệp hội chuyên  gia xã hội nhân dân Hàn Quốc</span>
+                <span class="d-block des-work-staff"> <span class="f-600">1/2020 -nay </span>– Điều hành chương trình thích ứng cơ bản</span>
+                <span class="d-block des-work-staff"><span class="f-600"> 1/2022-nay</span> – Điều hành chương trình hòa nhập xã hội </span>
             </div>
         </div>
     </div>
     <div class="team-teachers">
-        <div class="title">Đội Ngũ Thầy Cô chất lượng Việt - Hàn Tại KIPA</div>
+        <div class="title-company">Đội Ngũ Thầy Cô chất lượng Việt - Hàn Tại KIPA</div>
         <div class="info-teacher row">
             <div class="card^-teachers col-4 ">
                 <div class="col-6"><img class="img-logo-header col-4" src="~/Content/oanh.png"></div>
@@ -102,6 +226,83 @@
 
     </div>
     <div class="info-infrastructure">
+        <div class="header-infrastructure">
+            <div class="title-company">CƠ SỞ VẬT CHẤT TẠI KIPA</div>
+            <div class="image-infrastructure">
+                <img class="" src="~/Content/service1.png">
+                <img class="" src="~/Content/service1.png">
+                <img class="" src="~/Content/service1.png">
+                <img class="" src="~/Content/service1.png">
+
+            </div>
+        </div>
+        <div class="service-company">
+            <div class="title-company">CÁC DỊCH VỤ TẠI KIPA
+            </div>
+            <div class="main-service mt-5 row">
+                <div class="col-4 card-service row ">
+                    <div class="col-6 card-imgage-service">
+                      <div class="div-null"></div>
+                        <img class="imgage-service " src="~/Content/service1.png">
+                    </div>
+                    <div class="col-6 card-content-service">
+                        <span class="d-block titl-service">TƯ VẤN DU HỌC</span>
+                        <span class="d-block content-service pt-4">Tư vấn: <span class="f-600">Miễn phí</span></span>
+                        <span class="d-block content-service">Thông tin: <span class="f-600">Chính xác</span></span>
+                        <span class="d-block content-service">Thái độ: <span class="f-600">Tận tình</span></span>
+                    </div>
+                </div>
+                <div class="col-4 card-service row">
+                    <div class="col-6 card-imgage-service ">
+                        <div class="div-null"></div>
+                        <img class="imgage-service " src="~/Content/service2.png">
+                    </div>
+                    <div class="col-6 card-content-service">
+                        <span class="d-block titl-service">XỬ LÝ HỒ SƠ</span>
+                        <span class="d-block content-service pt-4">Chi phí: <span class="f-600">39.000 VND</span></span>
+                        <span class="d-block content-service f-600">Minh bạch, không phát sinh</span>
+                    </div>
+                </div>
+                <div class="col-4 card-service row">
+                    <div class="col-6 card-imgage-service">
+                        <div class="div-null"></div>
+                        <img class="imgage-service " src="~/Content/service3.png">
+                    </div>
+                    <div class="col-6 card-content-service">
+                        <span class="d-block titl-service">KHÓA HỌC TIẾNG HÀN</span>
+                        <span class="d-block content-service pt-4">Học phí: <span class="f-600">Trọn gói</span></span>
+                        <span class="d-block content-service">Thời gian: <span class="f-600">5 buổi/ tuần</span></span>
+                        <span class="d-block content-service">Giáo viên: <span class="f-600">Việt Nam - Hàn Quốc</span></span>
+                    </div>
+                </div>
+                <div class="col-6 card-service row mt-5">
+                    <div class="col-6 card-imgage-service">
+                        <div class="div-null"></div>
+                        <img class="imgage-service " src="~/Content/service3.png">
+                    </div>
+                    <div class="col-6 card-content-service">
+                        <span class="d-block titl-service">GIAO LƯU VĂN HÓA</span>
+                        <span class="d-block content-service pt-4">Thời gian: <span class="f-600">Định kỳ/tháng
+                        </span></span>
+                        <span class="d-block content-service f-600">Bổ ích -  miễn phí</span
+                        <span class="d-block content-service">Tạo nên Cộng Đồng Du Họcsinh tương trợ bền vững</span>
+                    </div>
+                </div>
+                <div class="col-6 card-service row mt-5">
+                    <div class="col-6 card-imgage-service">
+                        <div class="div-null"></div>
+                        <img class="imgage-service " src="~/Content/service4.png">
+                    </div>
+                    <div class="col-6 card-content-service">
+                        <span class="d-block titl-service">KÝ TÚC XÁ</span>
+                        <span class="d-block content-service pt-4">Chi phí: <span class="f-600">Miễn phí</span></span>
+                        <span class="d-block content-service f-600">Tiện nghi - an toàn</span>
+                        <span class="d-block content-service">Giúp học sinh làm quen cuộc
+sống xa nhà</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </body>
