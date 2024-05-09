@@ -1,8 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
     Layout = "~/Views/Shared/_LayoutIndex.cshtml";
-}
 
+}
+<head>
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+</head>
 <style>
     .text-center {
         height: 100vh;
@@ -92,7 +101,7 @@
         height: 40vh;
         min-height: 400px
         /*    width: 60%;
-            margin: auto */
+                    margin: auto */
     }
 
         .header-view-partner span {
@@ -168,7 +177,7 @@
     }
 
     .students-comments {
-        height: 80vh;
+        height: 120vh;
         background-image: url('Content/section.png');
         background-repeat: no-repeat;
         background-size: cover;
@@ -187,16 +196,28 @@
         padding: 20px;
         height: 50%;
         /*   word-wrap: break-word;
-            white-space: nowrap; */
+                    white-space: nowrap; */
     }
 
     .des-school {
         height: 100%;
         width: 100%;
         /*    word-wrap: break-word;
-            white-space: pre-wrap; */
+                    white-space: pre-wrap; */
     }
 
+    .card-students-comment {
+        background-color: #ffff;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 55px;
+    }
+    .f-600{
+        font-weight: 600
+    }
+    .span-des-student{
+        font-style: italic;
+    }
 </style>
 <head>
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
@@ -307,37 +328,192 @@
             </div>
         </div>
     </div>
-   
-    <script>
-        let isDragging = false;
-        let startX;
-        let startScrollLeft;
+    <div class="students-comments">
+        <div class="programe-title row">
+            <div class="button-progame">
+                CẢM NHẬN CỦA HỌC VIÊN
+            </div>
+            <div class="card-students-comment col-4 row">
+                <div class="img-student-div col-3"> <img class="img-school-partner " src="~/Content/avatar-01.png"></div>
+                <div class="content-student col-9">
+                    <span class="d-block">
+                        Sau khi tìm hiểu rất nhiều trung tâm du học trên thị
+                        trường, tôi đã lựa chọn KIPA vì ở đây các chi phí
+                        đều rất minh bạch, làm việc trực tiếp không qua
+                        trung gian nên tiết kiệm được khoảng 100 triệu
+                        đồng. Trước khi chốt, chúng tôi còn ghé qua ký túc
+                        xem kỹ hơn. Thấy nơi ở của các cháu sạch sẽ, an toàn,
+                        có đủ đồ phòng cháy chữa cháy,.. nên mới yên tâm
+                        đặt bút ký.
+                    </span>
+                    <span class="d-block f-600 pt-3">Phụ huynh bạn Thu Hằng</span>
+                </div>
+            </div>
+            <div class="card-students-comment col-4 row">
+                <div class="img-student-div col-3">
+                    <img class="img-school-partner" src="~/Content/avatar-03.png">
+                </div>
+                <div class="content-student col-9">
+                    <span class="d-block">
+                        Em từng trượt ở 1 trung tâm khác và đã quyết định
+                        gửi lại hồ sơ vào KIPA. Cảm ơn trung tâm đã giúp
+                        đỡ em rất nhiều. Bởi với em khoảng thời gian đó
+                        thực sự khó khăn, em mất niềm tin vào bản thân và
+                        từng nghĩ mình là kẻ thất bại. Cảm ơn cô giáo, cảm
+                        ơn chị Nhung và chị sale đã luôn động viên em ạ!
+                    </span>
+                    <span class="d-block f-600 pt-3">Bạn Nguyễn Huyền</span>
+                    <span class="d-block span-des-student">Sinh viên Đại học Hankuk</span>
 
-        const content = document.getElementById('main-partner');
+                </div>
+            </div>
+            <div class="card-students-comment col-4 row">
+                <div class="img-student-div col-3">
+                    <img class="img-school-partner " src="~/Content/avatar-03.png">
+                </div>
+                <div class="content-student col-9">
+                    <span class="d-block">
+                        Con gái tôi sau khi tốt nghiệp cấp 3 thì muốn đi du
+                        học Hàn. Tôi đã được bạn bè có con đi trước giới
+                        thiệu vào KIPA. Sau khi so sánh và tham khảo kỹ
+                        lưỡng hai vợ chồng tôi đã quyết định gửi gắm con
+                        vào đây. Đến bây giờ sau khi cháu đã đi du học gia
+                        đình vẫn giữ liên lạc với tư vấn viên của trung tâm và
+                        nhờ mọi người giúp đỡ con bên Hàn.
+                    </span>
+                    <span class="d-block f-600 ">Phụ huynh bạn Thu Hằng</span>
+                </div>
+            </div>
+            <div class="card-students-comment col-4 row">
+                <div class="img-student-div col-3">
+                    <img class="img-school-partner" src="~/Content/avatar-03.png">
+                </div>
+                <div class="content-student col-9">
+                    <span class="d-block">
+                        Em từng học đại học ở Việt Nam nhưng rồi lại quyết
+                        định chuyển tiếp sang Hàn để theo đuổi giấc mơ của
+                        mình. Cảm ơn KIPA từ những ngày đầu đã rất
+                        nhiệt tình tư vấn, xử lý hồ sơ chuyển tiếp cho em.
+                        Sang Hàn học mới thấy, hỏi 10 bạn thì có tới 8 bạn
+                        cũng đi từ KIPA luôn ạ: từ Hà Nội, Đà Nẵng, Sài
+                        Gòn,... đều rất đông. Mỗi khi tìm thấy 1 bạn Sunnier
+                        em cảm thấy như tìm được người nhà ở nơi đất
+                        khách quê người ấy.
+                    </span>
+                    <span class="d-block f-600">Bạn Nguyễn Châu</span>
+                    <span class="d-block span-des-student">Sinh viên Đại học Kwangwoon</span>
 
-        content.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.pageX - content.offsetLeft;
-            startScrollLeft = content.scrollLeft;
-        });
+                </div>
+            </div>
+        </div>
 
-        document.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
+    </div>
 
-        document.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            e.preventDefault();
-            const x = e.pageX - content.offsetLeft;
-            const walk = (x - startX);
-            content.scrollLeft = startScrollLeft - walk;
-        });
-    </script>
-    <script src="jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <div class="activities-info">
+        <div class="programe-title col-12">
+            <div class="button-progame">
+                HOẠT ĐỘNG Ở KIPA
+            </div>
+        </div>
+        <div class="conntent-activities row">
+            <div class="content-left col-6">
+                <img class="img-school-partner" src="~/Content/school.png">
+                <div class="title-content-left">
+                    CHƯƠNG TRÌNH GIAO LƯU VĂN HÓA VIỆT - HÀN | THPT VIỆT ĐỨC VÀ THPT GIMCHEON
+                </div>
+                <div class="content-right col-6">Chương trình diễn ra với các hoạt động giao lưu văn hóa - thể thao - nghệ thuật như: trình diễn Taekwondo, giao hữu bóng rổ, nhảy dây, tặng quà lưu niệm,...Học sinh hai trường đã có khoảng thời gian đáng nhớ trong buổi sáng vừa qua. </div>
+                <div class="show-more">Xem thêm</div>
+            </div>
+            <div class="content-right col-6">
+                <div class="card-content-activities row">
+                    <div class="col-4">
+                        <img class="img-school-partner" src="~/Content/school.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="title-content-left">
+                            CHƯƠNG TRÌNH GIAO LƯU VĂN HÓA VIỆT - HÀN | THPT VIỆT ĐỨC VÀ THPT GIMCHEON
+                        </div>
+                        <div class="content-right col-6">Chương trình diễn ra với các hoạt động giao lưu văn hóa - thể thao - nghệ thuật như: trình diễn Taekwondo, giao hữu bóng rổ, nhảy dây, tặng quà lưu niệm,...Học sinh hai trường đã có khoảng thời gian đáng nhớ trong buổi sáng vừa qua. </div>
+                        <div class="show-more">Xem thêm</div>
+                    </div>
+                </div>
+                <div class="card-content-activities row">
+                    <div class="col-4">
+                        <img class="img-school-partner" src="~/Content/school.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="title-content-left">
+                            CHƯƠNG TRÌNH GIAO LƯU VĂN HÓA VIỆT - HÀN | THPT VIỆT ĐỨC VÀ THPT GIMCHEON
+                        </div>
+                        <div class="content-right col-6">Chương trình diễn ra với các hoạt động giao lưu văn hóa - thể thao - nghệ thuật như: trình diễn Taekwondo, giao hữu bóng rổ, nhảy dây, tặng quà lưu niệm,...Học sinh hai trường đã có khoảng thời gian đáng nhớ trong buổi sáng vừa qua. </div>
+                        <div class="show-more">Xem thêm</div>
+                    </div>
+                </div>
+                <div class="card-content-activities row">
+                    <div class="col-4">
+                        <img class="img-school-partner" src="~/Content/school.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="title-content-left">
+                            CHƯƠNG TRÌNH GIAO LƯU VĂN HÓA VIỆT - HÀN | THPT VIỆT ĐỨC VÀ THPT GIMCHEON
+                        </div>
+                        <div class="content-right col-6">Chương trình diễn ra với các hoạt động giao lưu văn hóa - thể thao - nghệ thuật như: trình diễn Taekwondo, giao hữu bóng rổ, nhảy dây, tặng quà lưu niệm,...Học sinh hai trường đã có khoảng thời gian đáng nhớ trong buổi sáng vừa qua. </div>
+                        <div class="show-more">Xem thêm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="owl-carousel">
+        <div class="item">
+            <span class="d-block line-20 ml-70">• Đơn xin cấp visa</span>
+            <span class="d-block line-20 ml-70">• Hộ chiếu bản gốc + bản sao. </span>
+            <span class="d-block line-20 ml-70">• 1 ảnh thẻ (nền trắng 3.5*4.5cm)</span>
+            <span class="d-block line-20 ml-70">• Giấy nhập học</span>
+            <span class="d-block line-20 ml-70">• Bản sao chứng nhận đăng kí kinh doanh của nơi đào tạo</span>
+            <span class="d-block line-20 ml-70">• Bản sao CMND/CCCD </span>
+        </div>
+        <div class="item">
+            <img class="img-school-partner" src="~/Content/school.png">
+            <span class="d-block line-20 ml-70">• Đơn xin cấp visa Đơn xin cấp visaĐơn xin cấp visaĐơn xin cấp visaĐơn xin cấp visaĐơn xin cấp visaĐơn xin cấp visaĐơn xin cấp visaĐơn xin cấp visaĐơn xin cấp visaĐơn xin cấp visa</span>
+            <span class="d-block line-20 ml-70">• Hộ chiếu bản gốc + bản sao. </span>
+            <span class="d-block line-20 ml-70">• 1 ảnh thẻ (nền trắng 3.5*4.5cm)</span>
+            <span class="d-block line-20 ml-70">• Giấy nhập học</span>
+            <span class="d-block line-20 ml-70">• Bản sao chứng nhận đăng kí kinh doanh của nơi đào tạo</span>
+            <span class="d-block line-20 ml-70">• Bản sao CMND/CCCD </span>
+        </div>
+        <div class="item">
+            <span class="d-block line-20 ml-70">• Đơn xin cấp visa</span>
+            <span class="d-block line-20 ml-70">• Hộ chiếu bản gốc + bản sao. </span>
+            <span class="d-block line-20 ml-70">• 1 ảnh thẻ (nền trắng 3.5*4.5cm)</span>
+            <span class="d-block line-20 ml-70">• Giấy nhập học</span>
+            <span class="d-block line-20 ml-70">• Bản sao chứng nhận đăng kí kinh doanh của nơi đào tạo</span>
+            <span class="d-block line-20 ml-70">• Bản sao CMND/CCCD </span>
+        </div>
+        <div class="item"><img src="https://placekitten.com/200/203" alt="Kitten 4"></div>
+        <div class="item"><img src="https://placekitten.com/200/204" alt="Kitten 5"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function () {
-            $(".owl-carousel").owlCarousel();
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
         });
     </script>
+
 </body>

@@ -1,0 +1,186 @@
+﻿@{
+    ViewData["Title"] = "Du học cấp 3";
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+}
+<style>
+    .study-abroad-high-school {
+        width: 80%;
+        margin: 20px auto;
+        padding: 30px;
+        color: #411C6B;
+    }
+
+    .card-progame-study {
+        width: 100%;
+        padding: 20px;
+        color: #411C6B;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 6px
+    }
+
+    .card-pro {
+        padding: 10px;
+        margin: 10px;
+        color: white;
+        background-color: #411C6B;
+        border-radius: 6px;
+        font-size: 14px
+    }
+
+    .title-card-progame {
+        color: #411C6B;
+        font-weight: 600;
+    }
+
+    .img-vector {
+        margin-right: 10px
+    }
+
+    .card-content-letter {
+        width: 100%;
+        padding: 20px;
+        color: #411C6B;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 6px
+    }
+
+    .f-600 {
+        font-weight: 600
+    }
+
+    .d-block {
+        display: block;
+    }
+
+    .a-link-page {
+        text-decoration: none;
+        margin: 10px;
+        color: #411C6B;
+    }
+
+    .style-type-none {
+        list-style-type: none;
+        padding-left: 5px
+    }
+
+    .a-link-page:hover {
+        font-weight: 600
+    }
+
+    .title-page {
+        font-size: 28px;
+        text-align: center;
+        font-weight: 600
+    }
+
+    .line-20 {
+        line-height: 2
+    }
+
+    .reson-study {
+    }
+
+    .list-reson-study {
+    }
+
+    .option-reson {
+        font-weight: 600
+    }
+
+    .ml-50 {
+        margin-left: 50px
+    }
+
+    .ml-70 {
+        margin-left: 70px
+    }
+
+    .order-number-title {
+        font-size: 20px
+    }
+
+    .content-section {
+        padding: 5px 20px;
+    }
+
+    .img-page {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .span-des-image {
+        text-align: center;
+        color: gray;
+        font-style: italic;
+        font-size: 16px
+    }
+
+    .div-image-page {
+        display: flex
+    }
+
+    .title-child-page {
+        font-weight: 600;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+
+    .des-child-page {
+        margin-left: 20px
+    }
+</style>
+<body>
+    <div class="study-abroad-high-school row">
+        <div class="left-high-school col-3">
+            <div class="card-content-letter" id="card-content-letter">
+                <div class="title-left-link f-600">Nội dung công việc</div>
+                <ul class="pt-3 style-type-none">
+                    <li><a href="#section1" class="a-link-page d-block"></a></li>
+                    <li><a href="#section2" class="a-link-page d-block"> </a> </li>
+                    <li><a href="#section3" class="a-link-page d-block"> </a> </li>
+                    <li><a href="#section4" class="a-link-page d-block"></a></li>
+                    <li><a href="#section5" class="a-link-page d-block"> </a></li>
+                    <li><a href="#section6" class="a-link-page d-block"></a></li>
+                    <li><a href="#section7" class="a-link-page d-block"></a></li>
+                    <li><a href="#section8" class="a-link-page d-block"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="center-high-school col-7">
+        </div>
+        <div class="right-high-school col-2 mt-3">
+            <div class="card-progame-study">
+                <div class="title-card-progame">Chương trình của KIPA</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png"> Đào tạo tiếng hàn doanh nghiệp</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Đào tạo E9 về nước</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Du học cấp 3</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Du học thạc sỹ</div>
+            </div>
+            <div class="card-progame-study mt-3">
+                <div class="title-card-progame">Visa Hàn Quốc</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Visa D4</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Visa D10</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Visa D2</div>
+                <div class="card-pro">   <img class="img-vector" src="~/Content/vector.png">Visa E9</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('card-content-letter').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior
+
+            if (e.target.tagName === 'A') {
+                var targetId = e.target.getAttribute('href').substring(1); // Get the ID of the target content section
+                var targetElement = document.getElementById(targetId); // Find the target content section
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll to the target content section smoothly
+                }
+            }
+        });
+
+    </script>
+
+</body>
